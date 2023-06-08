@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const mongoose_delete = require('mongoose-delete');
 
 //shape data
 const customerSchema = new mongoose.Schema(
@@ -35,7 +34,6 @@ const projectSchema = new mongoose.Schema(
 );
 
 // Override all methods
-projectSchema.plugin(mongoose_delete, { overrideMethods: 'all' });
 
 const Project = mongoose.model('Project', projectSchema);
 
